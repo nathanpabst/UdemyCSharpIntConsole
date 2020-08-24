@@ -17,3 +17,7 @@ namespace UdemyCsharpIntermediateConsoleApp
         }
     }
 }
+
+//NOTES:
+//object initializer: a syntax for quickly initializing an object without the need to call the constructor
+//ex: var person = new Person {FirstName = "Nathan", LastName = "Pabst"};
