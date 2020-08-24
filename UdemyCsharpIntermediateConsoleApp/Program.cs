@@ -6,14 +6,49 @@ namespace UdemyCsharpIntermediateConsoleApp
     {
         private static void Main(string[] args)
         {
-            var person = Person.Parse("Nathan");
-            person.Introduce("Nicole");
+            //UseParams();
+            //UsePerson();
+            //UseCustomer();
+        }
 
+        private static void UseCustomer()
+        {
             var customer = new Customer(1, "Nicole");
             var order = new Order();
-
             Console.WriteLine(customer.Id);
             Console.WriteLine(customer.Name);
+        }
+
+        private static void UsePerson()
+        {
+            var person = Person.Parse("Nathan");
+            person.Introduce("Nicole");
+        }
+
+        private static void UseParams()
+        {
+            var calculator = new Calculator();
+            Console.WriteLine(calculator.Add(1, 2));
+            Console.WriteLine(calculator.Add(1, 2, 3));
+            Console.WriteLine(calculator.Add(1, 2, 3, 4));
+            Console.WriteLine(calculator.Add(new int[] { 1, 2, 3, 4, 5, 6 }));
+        }
+
+        private static void UsePoints()
+        {
+            try
+            {
+                var point = new Point(10, 20);
+                point.Move(null);
+                Console.WriteLine("Point is at ({0}, {1})", point.X, point.Y); //returns (40, 60)
+
+                point.Move(100, 200);
+                Console.WriteLine("Point is at ({0}, {1})", point.X, point.Y); //returns (100, 200)
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
         }
     }
 }

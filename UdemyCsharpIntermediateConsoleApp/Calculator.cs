@@ -25,7 +25,17 @@ namespace UdemyCsharpIntermediateConsoleApp
         //further refactored using the params modifier...
         //By using the params keyword, you can specify a method parameter that takes a variable number of arguments. The parameter type must be a single-dimensional array. No additional parameters are permitted after the params keyword in a method declaration, and only one params keyword is permitted in a method declaration.
         //use params when your method will have a varying number of parameters
-        //public int Add(params int[] numbers) { }
+        public int Add(params int[] numbers)
+        {
+            var sum = 0;
+            foreach (var number in numbers)
+            {
+                sum += number;
+            }
+
+            return sum;
+        }
+
         //NOTE: using params, we don't have to create and initialize a new array
         //private var result = calculator.Add(1, 2, 3, 4);
     }
