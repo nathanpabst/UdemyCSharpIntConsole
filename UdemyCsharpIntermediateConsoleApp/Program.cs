@@ -8,15 +8,22 @@ namespace UdemyCsharpIntermediateConsoleApp
         {
             //UseParams();
             //UsePerson();
-            //UseCustomer();
+            UseCustomer();
         }
 
         private static void UseCustomer()
         {
             var customer = new Customer(1, "Nicole");
-            var order = new Order();
-            Console.WriteLine(customer.Id);
-            Console.WriteLine(customer.Name);
+            customer.Orders.Add(new Order());
+            customer.Orders.Add(new Order());
+
+            customer.Promote();
+
+            Console.WriteLine(customer.Orders.Count);
+
+            //var order = new Order();
+            //Console.WriteLine(customer.Id);
+            //Console.WriteLine(customer.Name);
         }
 
         private static void UsePerson()

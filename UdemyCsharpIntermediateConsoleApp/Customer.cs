@@ -13,7 +13,7 @@ namespace UdemyCsharpIntermediateConsoleApp
 
         //example of initializing the orders field directly without creating the constructor. with this approach,
         //..the Orders field will always be initialized to an empty list regardless of which constructor is called
-        public List<Order> Orders = new List<Order>();
+        public readonly List<Order> Orders = new List<Order>();
 
         //fields using the readonly modifier ensure the field is only assigned once
         //readonly List<Order> Orders = new List<Order>();
@@ -37,6 +37,10 @@ namespace UdemyCsharpIntermediateConsoleApp
         //Method
         public void Promote()
         {
+            //the following line is a defect and when the method is used will clear out any existing orders.
+            //Orders is initialized above and does not need to be re-initialized.
+            //To correct this, we need to add the 'readonly' modifier in the declaration or constructor
+            //Orders = new List<Order>();
             // ...
         }
     }
