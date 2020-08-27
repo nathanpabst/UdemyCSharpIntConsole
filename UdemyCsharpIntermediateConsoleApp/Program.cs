@@ -28,9 +28,11 @@ namespace UdemyCsharpIntermediateConsoleApp
 
         private static void UsePerson()
         {
-            var person = new Person();
-            person.SetBirthday(new DateTime(1984, 1, 3));
-            Console.WriteLine(person.GetBirthday());
+            var person = new Person(new DateTime(1984, 1, 3));
+            Console.WriteLine(person.Age);
+
+            //person.SetBirthday(new DateTime(1984, 1, 3));
+            //Console.WriteLine(person.GetBirthday());
 
             //var person = Person.Parse("Nathan");
             //person.Introduce("Nicole");

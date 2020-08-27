@@ -6,17 +6,29 @@ namespace UdemyCsharpIntermediateConsoleApp
 {
     public class Person
     {
-        //public string Name;
-        private DateTime _birthday;
+        //Property: a class member that encapsulates a getter/setter for accessing a field.
+        //auto-implemented properties...
+        public string Name { get; set; }
 
-        public void SetBirthday(DateTime birthday)
+        public string UserName { get; set; }
+        public DateTime Birthday { get; private set; }
+
+        //constructor
+        public Person(DateTime birthday)
         {
-            _birthday = birthday;
+            Birthday = birthday;
         }
 
-        public DateTime GetBirthday()
+        //calculated properties...
+        public int Age
         {
-            return _birthday;
+            get
+            {
+                var timeSpan = DateTime.Today - Birthday;
+                var years = timeSpan.Days / 365;
+
+                return years;
+            }
         }
 
         //public void Introduce(string to)
