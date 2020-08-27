@@ -7,8 +7,8 @@ namespace UdemyCsharpIntermediateConsoleApp
         private static void Main(string[] args)
         {
             //UseParams();
-            //UsePerson();
-            UseCustomer();
+            UsePerson();
+            //UseCustomer();
         }
 
         private static void UseCustomer()
@@ -28,8 +28,12 @@ namespace UdemyCsharpIntermediateConsoleApp
 
         private static void UsePerson()
         {
-            var person = Person.Parse("Nathan");
-            person.Introduce("Nicole");
+            var person = new Person();
+            person.SetBirthday(new DateTime(1984, 1, 3));
+            Console.WriteLine(person.GetBirthday());
+
+            //var person = Person.Parse("Nathan");
+            //person.Introduce("Nicole");
         }
 
         private static void UseParams()
