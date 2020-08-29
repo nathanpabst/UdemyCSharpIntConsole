@@ -16,7 +16,9 @@ namespace UdemyCsharpIntermediateConsoleApp
     //EX. a 'car' is a vehicle
     //Benefits: code re-use & polymorphic behavior
 
-    //Composition:
+    //Composition: A kind of relationship between two classes that allows one to contain the other. Considered a 'Has-A' relationship
+    //EX. a 'car' has an Engine
+    //Benefits of Composition..code re-use, flexibility, a means to designing loose-coupled applications
 
     //Interfaces
     public class PresentationObject

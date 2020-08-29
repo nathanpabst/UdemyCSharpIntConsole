@@ -6,13 +6,30 @@ namespace UdemyCsharpIntermediateConsoleApp
     {
         private static void Main(string[] args)
         {
-            var text = new Text();
-            text.Width = 100;
-            text.Copy();
+            UseDbMigrator();
+            //UseText();
             //UseCookie();
             //UseParams();
             //UsePerson();
             //UseCustomer();
+        }
+
+        private static void UseDbMigrator()
+        {
+            //ex. of using Composition...loose coupling and more flexibility than Inheritance
+            var dbMigrator = new DbMigrator(new Logger());
+            var logger = new Logger();
+            var installer = new Installer(logger);
+
+            dbMigrator.Migrate();
+            installer.Install();
+        }
+
+        private static void UseText()
+        {
+            var text = new Text();
+            text.Width = 100;
+            text.Copy();
         }
 
         private static void UseCookie()
