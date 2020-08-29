@@ -6,7 +6,10 @@ namespace UdemyCsharpIntermediateConsoleApp
     {
         private static void Main(string[] args)
         {
-            UseCookie();
+            var text = new Text();
+            text.Width = 100;
+            text.Copy();
+            //UseCookie();
             //UseParams();
             //UsePerson();
             //UseCustomer();
