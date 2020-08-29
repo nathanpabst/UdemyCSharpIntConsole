@@ -6,9 +6,17 @@ namespace UdemyCsharpIntermediateConsoleApp
     {
         private static void Main(string[] args)
         {
+            UseCookie();
             //UseParams();
-            UsePerson();
+            //UsePerson();
             //UseCustomer();
+        }
+
+        private static void UseCookie()
+        {
+            var cookie = new HttpCookie();
+            cookie["name"] = "Frogger";
+            Console.WriteLine(cookie["name"]);
         }
 
         private static void UseCustomer()
