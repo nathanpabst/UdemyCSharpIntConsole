@@ -4,6 +4,13 @@ namespace UdemyCsharpIntermediateConsoleApp
 {
     internal class Program
     {
+        //ACCESS MODIFIERS...
+        //Public: accessible from everywhere.
+        //Private: accessible only from the class.
+        //Protected: accessible only from the class and its derived classes. Breaks Encapsulation by revealing implementation details.
+        //Internal: accessible only from the same assembly.
+        //Protected Internal: accessible only from the same assembly or any derived classes.
+
         private static void Main(string[] args)
         {
             UseDbMigrator();
