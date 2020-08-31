@@ -6,7 +6,7 @@ namespace UdemyCsharpIntermediateConsoleApp
 {
     public class DbMigrator
     {
-        //introduces and initializes the field Logger
+        //introduces and initializes the field Logger. Creates an association with the logger class.
         private readonly Logger _logger;
 
         public DbMigrator(Logger logger)
@@ -17,7 +17,7 @@ namespace UdemyCsharpIntermediateConsoleApp
 
         public void Migrate()
         {
-            _logger.Log("migrating...");
+            _logger.Log("migrating the thing...");
         }
     }
 }
