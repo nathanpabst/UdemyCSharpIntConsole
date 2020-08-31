@@ -1,4 +1,5 @@
 ﻿using System;
+using Amazon;
 
 namespace UdemyCsharpIntermediateConsoleApp
 {
@@ -13,12 +14,12 @@ namespace UdemyCsharpIntermediateConsoleApp
 
         private static void Main(string[] args)
         {
-            UseDbMigrator();
+            //UseDbMigrator();
             //UseText();
             //UseCookie();
             //UseParams();
             //UsePerson();
-            //UseCustomer();
+            UseCustomer();
         }
 
         private static void UseDbMigrator()
@@ -48,17 +49,9 @@ namespace UdemyCsharpIntermediateConsoleApp
 
         private static void UseCustomer()
         {
-            var customer = new Customer(1, "Nicole");
-            customer.Orders.Add(new Order());
-            customer.Orders.Add(new Order());
+            var customer = new Customer();
 
             customer.Promote();
-
-            Console.WriteLine(customer.Orders.Count);
-
-            //var order = new Order();
-            //Console.WriteLine(customer.Id);
-            //Console.WriteLine(customer.Name);
         }
 
         private static void UsePerson()

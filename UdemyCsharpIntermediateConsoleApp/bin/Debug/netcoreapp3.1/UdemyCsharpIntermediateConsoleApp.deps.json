@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v3.1": {
       "UdemyCsharpIntermediateConsoleApp/1.0.0": {
+        "dependencies": {
+          "Amazon": "1.0.0"
+        },
         "runtime": {
           "UdemyCsharpIntermediateConsoleApp.dll": {}
+        }
+      },
+      "Amazon/1.0.0": {
+        "runtime": {
+          "Amazon.dll": {}
         }
       }
     }
   },
   "libraries": {
     "UdemyCsharpIntermediateConsoleApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Amazon/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

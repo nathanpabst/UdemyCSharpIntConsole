@@ -11,3 +11,6 @@ C:\Users\ej319nm\source\repos\UdemyCsharpIntermediateConsoleApp\UdemyCsharpInter
 C:\Users\ej319nm\source\repos\UdemyCsharpIntermediateConsoleApp\UdemyCsharpIntermediateConsoleApp\obj\Debug\netcoreapp3.1\UdemyCsharpIntermediateConsoleApp.dll
 C:\Users\ej319nm\source\repos\UdemyCsharpIntermediateConsoleApp\UdemyCsharpIntermediateConsoleApp\obj\Debug\netcoreapp3.1\UdemyCsharpIntermediateConsoleApp.pdb
 C:\Users\ej319nm\source\repos\UdemyCsharpIntermediateConsoleApp\UdemyCsharpIntermediateConsoleApp\obj\Debug\netcoreapp3.1\UdemyCsharpIntermediateConsoleApp.genruntimeconfig.cache
+C:\Users\ej319nm\source\repos\UdemyCsharpIntermediateConsoleApp\UdemyCsharpIntermediateConsoleApp\bin\Debug\netcoreapp3.1\Amazon.dll
+C:\Users\ej319nm\source\repos\UdemyCsharpIntermediateConsoleApp\UdemyCsharpIntermediateConsoleApp\bin\Debug\netcoreapp3.1\Amazon.pdb
+C:\Users\ej319nm\source\repos\UdemyCsharpIntermediateConsoleApp\UdemyCsharpIntermediateConsoleApp\obj\Debug\netcoreapp3.1\UdemyCsharpIntermediateConsoleApp.csproj.CopyComplete
