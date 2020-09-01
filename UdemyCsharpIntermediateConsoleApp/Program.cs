@@ -5,16 +5,31 @@ namespace UdemyCsharpIntermediateConsoleApp
 {
     internal class Program
     {
-        //ACCESS MODIFIERS...
-        //Public: accessible from everywhere.
-        //Private: accessible only from the class.
-        //Protected: accessible only from the class and its derived classes. Breaks Encapsulation by revealing implementation details.
-        //Internal: accessible only from the same assembly.
-        //Protected Internal: accessible only from the same assembly or any derived classes.
+        //Upcasting: conversion from a derived class to a base class
+        public class Shape
+        {
+        }
+
+        //Circle class is derived from the Shape class
+        public class Circle : Shape
+        {
+        }
+
+        //Downcasting: conversion from a base class to a derived class
+
+        //The 'as' keywords...
 
         private static void Main(string[] args)
         {
-            var car = new Car("asdfghj12345"); //will write two messages (from Vehicle & Car) to the console.
+            //UPCASTING: converting the object 'Circle' to it's base class reference i.e. 'Shape'. this is implicit and does not require conversion.
+            //Object 'Circle' with the type of circle
+            Circle circle = new Circle();
+            Shape shape = circle;
+
+            //DOWNCASTING: converting 'shape' to the 'Circle' object using an explicit cast.
+            Circle anotherCircle = (Circle)shape;
+
+            //var car = new Car("asdfghj12345"); //will write two messages (from Vehicle & Car) to the console.
             //UseDbMigrator();
             //UseText();
             //UseCookie();
