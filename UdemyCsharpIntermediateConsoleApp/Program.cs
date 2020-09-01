@@ -14,12 +14,13 @@ namespace UdemyCsharpIntermediateConsoleApp
 
         private static void Main(string[] args)
         {
+            var car = new Car("asdfghj12345"); //will write two messages (from Vehicle & Car) to the console.
             //UseDbMigrator();
             //UseText();
             //UseCookie();
             //UseParams();
             //UsePerson();
-            UseCustomer();
+            //UseCustomer();
         }
 
         private static void UseDbMigrator()
