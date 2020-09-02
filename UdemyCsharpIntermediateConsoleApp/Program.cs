@@ -1,35 +1,19 @@
 ﻿using System;
+using System.IO;
 using Amazon;
 
 namespace UdemyCsharpIntermediateConsoleApp
 {
     internal class Program
     {
-        //Upcasting: conversion from a derived class to a base class
-        public class Shape
-        {
-        }
-
-        //Circle class is derived from the Shape class
-        public class Circle : Shape
-        {
-        }
-
-        //Downcasting: conversion from a base class to a derived class
-
-        //The 'as' keywords...
-
         private static void Main(string[] args)
         {
-            //UPCASTING: converting the object 'Circle' to it's base class reference i.e. 'Shape'. this is implicit and does not require conversion.
-            //Object 'Circle' with the type of circle
-            Circle circle = new Circle();
-            Shape shape = circle;
-
-            //DOWNCASTING: converting 'shape' to the 'Circle' object using an explicit cast.
-            Circle anotherCircle = (Circle)shape;
-
-            //var car = new Car("asdfghj12345"); //will write two messages (from Vehicle & Car) to the console.
+            Shape shape = new Text();
+            //downcasting the shape object. '(Text) shape' converts shape to text
+            Text text = (Text)shape;
+            //upcasting is implicit. we can convert a object reference to it's base class.
+            //you can use downcasting to convert an object to a more specific type
+            //...by using an explicit cast or by using the 'as' keyword'.
             //UseDbMigrator();
             //UseText();
             //UseCookie();
@@ -51,9 +35,19 @@ namespace UdemyCsharpIntermediateConsoleApp
 
         private static void UseText()
         {
-            var text = new Text();
-            text.Width = 100;
-            text.Copy();
+            //FROM: upcasting and downcasting section
+            Text text = new Text();
+            //upcasting: text & shape are both references to the same object in memory.
+            Shape shape = text;
+
+            text.Width = 200;
+            shape.Width = 100;
+
+            Console.WriteLine(text.Width);
+            //_________________________
+            //var text = new Text();
+            //text.Width = 100;
+            //text.Copy();
         }
 
         private static void UseCookie()
