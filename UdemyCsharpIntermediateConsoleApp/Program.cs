@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using Amazon;
 
@@ -8,12 +10,20 @@ namespace UdemyCsharpIntermediateConsoleApp
     {
         private static void Main(string[] args)
         {
-            Shape shape = new Text();
-            //downcasting the shape object. '(Text) shape' converts shape to text
-            Text text = (Text)shape;
-            //upcasting is implicit. we can convert a object reference to it's base class.
-            //you can use downcasting to convert an object to a more specific type
-            //...by using an explicit cast or by using the 'as' keyword'.
+            //Boxing: the process of converting a value type instance to an object reference
+            //With boxing and unboxing, the creation of the extra object results in a performance penalty
+            //...it will be better to use a generic implementation, if one exists
+            var list = new ArrayList();
+            list.Add(1); //ArrayList accepts an object as an argument. boxing will occur
+            list.Add("Stuff"); //string is a reference. no unboxing here.
+            list.Add(DateTime.Today); //dateTime is a structure. structure is a value type, so boxing will occur
+
+            var anotherList = new List<int>(); //creates a generic list of numbers
+            anotherList.Add(); //receives an argument type of integer as opposed to object, which provides type-safety.
+            //...no boxing will occur because internally, this stores a list of integers (not objects).
+            var names = new List<string>();
+            names.Add(); // receives an argument type of string, which provides type-safety
+
             //UseDbMigrator();
             //UseText();
             //UseCookie();
