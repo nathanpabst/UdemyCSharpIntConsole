@@ -4,24 +4,17 @@ using System.Text;
 
 namespace UdemyCsharpIntermediateConsoleApp
 {
-    //Upcasting: conversion from a derived class to a base class
-    //UPCASTING: converting the object 'Circle' to it's base class reference i.e. 'Shape'. this is implicit and does not require conversion.
-    //Object 'Circle' with the type of circle
-    //Circle circle = new Circle();
-    //Shape shape = circle;
-
-    //Downcasting: conversion from a base class to a derived class
-    //DOWNCASTING: EX. converting 'shape' to the 'Circle' object using an explicit cast.
-    //Circle anotherCircle = (Circle)shape;
+    //METHOD OVERRIDING: modifying the implementation of an inherited method.
+    //METHOD OVERLOADING: method with the same name, but different signatures
+    //VIRTUAL: using the virtual keyword in the base class, gives us the ability to change the implementation of the method in the derived class with the OVERRIDE keyword
+    //virtual & override is an example of polymorphic behavior.
 
     public class Shape
     {
         public int Width { get; set; }
         public int Height { get; set; }
-        public int X { get; set; }
-        public int Y { get; set; }
 
-        public void Draw()
+        public virtual void Draw()
         {
         }
     }

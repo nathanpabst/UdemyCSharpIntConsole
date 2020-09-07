@@ -10,26 +10,23 @@ namespace UdemyCsharpIntermediateConsoleApp
     {
         private static void Main(string[] args)
         {
-            //Boxing: the process of converting a value type instance to an object reference
-            //With boxing and unboxing, the creation of the extra object results in a performance penalty
-            //...it will be better to use a generic implementation, if one exists
-            var list = new ArrayList();
-            list.Add(1); //ArrayList accepts an object as an argument. boxing will occur
-            list.Add("Stuff"); //string is a reference. no unboxing here.
-            list.Add(DateTime.Today); //dateTime is a structure. structure is a value type, so boxing will occur
-
-            var anotherList = new List<int>(); //creates a generic list of numbers
-            anotherList.Add(42); //receives an argument type of integer as opposed to object, which provides type-safety.
-            //...no boxing will occur because internally, this stores a list of integers (not objects).
-            var names = new List<string>();
-            names.Add("more stuff"); // receives an argument type of string, which provides type-safety
-
+            UseMethodOverriding();
             //UseDbMigrator();
             //UseText();
             //UseCookie();
             //UseParams();
             //UsePerson();
             //UseCustomer();
+        }
+
+        private static void UseMethodOverriding()
+        {
+            var shapes = new List<Shape>();
+            shapes.Add(new Circle());
+            shapes.Add(new Rectangle());
+
+            var canvas = new Canvas();
+            canvas.DrawShapes(shapes);
         }
 
         private static void UseDbMigrator()
