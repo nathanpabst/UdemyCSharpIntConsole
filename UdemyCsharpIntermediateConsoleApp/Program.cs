@@ -19,10 +19,10 @@ namespace UdemyCsharpIntermediateConsoleApp
             list.Add(DateTime.Today); //dateTime is a structure. structure is a value type, so boxing will occur
 
             var anotherList = new List<int>(); //creates a generic list of numbers
-            anotherList.Add(); //receives an argument type of integer as opposed to object, which provides type-safety.
+            anotherList.Add(42); //receives an argument type of integer as opposed to object, which provides type-safety.
             //...no boxing will occur because internally, this stores a list of integers (not objects).
             var names = new List<string>();
-            names.Add(); // receives an argument type of string, which provides type-safety
+            names.Add("more stuff"); // receives an argument type of string, which provides type-safety
 
             //UseDbMigrator();
             //UseText();
