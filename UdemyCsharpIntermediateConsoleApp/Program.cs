@@ -10,13 +10,23 @@ namespace UdemyCsharpIntermediateConsoleApp
     {
         private static void Main(string[] args)
         {
-            UseMethodOverriding();
+            UseAbstractClasses();
+            //UseMethodOverriding();
             //UseDbMigrator();
             //UseText();
             //UseCookie();
             //UseParams();
             //UsePerson();
             //UseCustomer();
+        }
+
+        private static void UseAbstractClasses()
+        {
+            var circle = new Circle();
+            circle.Draw();
+
+            var rectangle = new Rectangle();
+            rectangle.Draw();
         }
 
         private static void UseMethodOverriding()
