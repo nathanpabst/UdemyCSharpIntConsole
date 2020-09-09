@@ -10,10 +10,10 @@ namespace UdemyCsharpIntermediateConsoleApp
     {
         private static void Main(string[] args)
         {
-            UseInterfaces();
+            //UseInterfaces();
             //UseAbstractClasses();
             //UseMethodOverriding();
-            //UseDbMigrator();
+            UseDbMigrator();
             //UseText();
             //UseCookie();
             //UseParams();
@@ -52,13 +52,8 @@ namespace UdemyCsharpIntermediateConsoleApp
 
         private static void UseDbMigrator()
         {
-            //ex. of using Composition...loose coupling and more flexibility than Inheritance
-            var dbMigrator = new DbMigrator(new Logger());
-            var logger = new Logger();
-            var installer = new Installer(logger);
-
+            var dbMigrator = new DbMigrator(new ConsoleLogger());
             dbMigrator.Migrate();
-            installer.Install();
         }
 
         private static void UseText()
