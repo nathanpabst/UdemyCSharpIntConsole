@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UdemyCsharpIntermediateConsoleApp", "UdemyCsharpIntermediateConsoleApp\UdemyCsharpIntermediateConsoleApp.csproj", "{C3437C7C-9A9A-4836-B563-596FBC78D4E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazon", "Amazon\Amazon.csproj", "{28332F48-6C55-4A3C-9201-5486706F8518}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Amazon", "Amazon\Amazon.csproj", "{28332F48-6C55-4A3C-9201-5486706F8518}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
