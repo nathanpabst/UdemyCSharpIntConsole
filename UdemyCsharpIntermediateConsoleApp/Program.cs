@@ -10,15 +10,22 @@ namespace UdemyCsharpIntermediateConsoleApp
     {
         private static void Main(string[] args)
         {
+            UseInterfacesAndPolymorphism();
             //UseInterfaces();
             //UseAbstractClasses();
             //UseMethodOverriding();
-            UseDbMigrator();
+            //UseDbMigrator();
             //UseText();
             //UseCookie();
             //UseParams();
             //UsePerson();
             //UseCustomer();
+        }
+
+        private static void UseInterfacesAndPolymorphism()
+        {
+            var encoder = new VideoEncoder();
+            encoder.Encode(new Video());
         }
 
         private static void UseInterfaces()
